@@ -1,35 +1,31 @@
 // http://sonspring.com/journal/clearing-floats
-html body * span.clear,
-html body * div.clear,
-html body * li.clear,
-html body * dd.clear
-  :background none
-  :border 0
-  :clear both
-  :display block
-  :float none
-  :font-size 0
-  :list-style none
-  :margin 0
-  :padding 0
-  :overflow hidden
-  :visibility hidden
-  :width 0
-  :height 0
+html body *
+  span,
+  div,
+  li,
+  dd
+    &.clear
+      :background none
+      :border 0
+      :clear both
+      :display block
+      :float none
+      :font-size 0
+      :list-style none
+      :margin 0
+      :padding 0
+      :overflow hidden
+      :visibility hidden
+      :width 0
+      :height 0
 
 // http://www.positioniseverything.net/easyclearing.html
-.clearfix:after
-  :clear both
-  :content '.'
-  :display block
-  :visibility hidden
-  :height 0
-
 .clearfix
   :display inline-block
-
-* html .clearfix
-  :height 1%
-
-.clearfix
-  :display block
+  
+  &:after
+    :clear both
+    :content '.'
+    :display block
+    :visibility hidden
+    :height 0

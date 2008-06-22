@@ -82,12 +82,12 @@ blockquote,
 q
   :quotes none
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after
-  :content ''
-  :content none
+blockquote,
+q
+  &before,
+  &after
+    :content ''
+    :content none
 
 // remember to define focus styles!
 *:focus
