@@ -26,7 +26,36 @@
   :margin-right 0
 
 =grids(!cols, !gutter_width = !ninesixty_gutter_width)
+  #{enumerate(".grid_",1,!cols)}
+    +grid-unit-base
   @for !n from 1 through !cols
     .grid_#{!n}
-      +grid-width(!n, !cols, !gutter_width)  
-  
+      +grid-width(!n, !cols, !gutter_width)
+
+=grid-prefix(!n, !cols)
+  :padding-left= (960px / !cols) * !n
+
+=grid-prefixes(!cols)
+  @for !n from 1 through !cols - 1
+    .prefix_#{!n}
+      +grid-prefix(!n, !cols)
+
+=grid-suffix(!n, !cols)
+  :padding-right= (960px / !cols) * !n
+
+=grid-suffixes(!cols)
+  @for !n from 1 through !cols - 1
+    .suffix_#{!n}
+      +grid-suffix(!n, !cols)
+
+=grid-children
+  .alpha
+    +alpha
+  .omega
+    +omega
+
+=grid-system(!cols)
+  +grid-container
+  +grids(!cols)
+  +grid-prefixes(!cols)
+  +grid-suffixes(!cols)

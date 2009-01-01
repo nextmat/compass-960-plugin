@@ -1,5 +1,6 @@
 require 'fileutils'
 require 'sass'
+require 'lib/ninesixty/sass_extensions'
 
 Ninesixty = File.read('sass/960/grid.sass')
 Reset = File.read('sass/960/reset.sass')

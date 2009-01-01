@@ -4,16 +4,11 @@
   
   Licensed under GPL and MIT.
 
-@import grid/containers.sass
-@import grid/global.sass
-@import grid/children.sass
-@import grid/12.sass
-@import grid/16.sass
-        
-@import grid/prefix/12.sass
-@import grid/prefix/16.sass
-        
-@import grid/suffix/12.sass
-@import grid/suffix/16.sass
-        
+@import grid/base.sass
 @import grid/clear.sass
+
+.container_12
+  +grid-system(12)
+
+.container_16
+  +grid-system(16)
