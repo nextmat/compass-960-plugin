@@ -1,0 +1,32 @@
+!ninesixty_gutter_width ||= 20px
+
+=grid-container
+  :margin-left auto
+  :margin-right auto
+  :width 960px
+
+=grid-width(!n, !cols, !gutter_width = !ninesixty_gutter_width)
+  :width= (960px / !cols) * !n - !gutter_width
+
+=grid-unit-base(!gutter_width = !ninesixty_gutter_width)
+  :display inline
+  :float left
+  :margin
+    :left= !gutter_width / 2
+    :right= !gutter_width / 2
+
+=grid(!n, !cols, !gutter_width = !ninesixty_gutter_width)
+  +grid-unit-base(!gutter_width)
+  +grid-width(!n, !cols, !gutter_width)
+
+=alpha
+  :margin-left 0
+
+=omega
+  :margin-right 0
+
+=grids(!cols, !gutter_width = !ninesixty_gutter_width)
+  @for !n from 1 through !cols
+    .grid_#{!n}
+      +grid-width(!n, !cols, !gutter_width)  
+  

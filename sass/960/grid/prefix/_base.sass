@@ -1,0 +1,7 @@
+=grid-prefix(!n, !cols)
+  :padding-left= (960px / !cols) * !n
+
+=grid-prefixes(!cols)
+  @for !n from 1 through !cols - 1
+    .prefix_#{!n}
+      +grid-prefix(!n, !cols)

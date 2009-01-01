@@ -1,0 +1,7 @@
+=grid-suffix(!n, !cols)
+  :padding-right= (960px / !cols) * !n
+
+=grid-suffixes(!cols)
+  @for !n from 1 through !cols - 1
+    .suffix_#{!n}
+      +grid-suffix(!n, !cols)
