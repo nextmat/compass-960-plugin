@@ -1,9 +1,11 @@
 require 'fileutils'
 require 'sass'
 
-Ninesixty = File.read('sass/960.sass')
-Reset = File.read('sass/reset.sass')
-Text = File.read('sass/text.sass')
+Ninesixty = File.read('sass/960/grid.sass')
+Reset = File.read('sass/960/reset.sass')
+Text = File.read('sass/960/text.sass')
+
+LoadPaths = [File.expand_path(File.join( File.dirname(__FILE__), 'sass', '960' ))]
 
 out = 'css'; Out = File.expand_path(File.join( File.dirname(__FILE__), out ))
 FileUtils.mkdir_p(Out) unless File.directory?(Out)
@@ -13,7 +15,7 @@ namespace :ninesixty do
   desc "Generates a standard, uncompressed, nested output."
   task :standard do
     File.open( File.join(Out, '960.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Ninesixty, :style => :nested, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Ninesixty, :style => :nested, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -21,7 +23,7 @@ namespace :ninesixty do
   desc "Generates an old-skool human-written CSS output, with no nesting."
   task :flat do
     File.open( File.join(Out, '960.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -29,7 +31,7 @@ namespace :ninesixty do
   desc "Generates a compressed output, light but not obfuscated"
   task :micro do
     File.open( File.join(Out, '960.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -37,7 +39,7 @@ namespace :ninesixty do
   desc "Generates a super-compressed output"
   task :nano do
     File.open( File.join(Out, '960.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Ninesixty, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -48,7 +50,7 @@ namespace :text do
   desc "Generates a standard, uncompressed, nested output."
   task :standard do
     File.open( File.join(Out, 'reset.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Reset, :style => :nested, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Reset, :style => :nested, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -56,7 +58,7 @@ namespace :text do
   desc "Generates an old-skool human-written CSS output, with no nesting."
   task :flat do
     File.open( File.join(Out, 'reset.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -64,7 +66,7 @@ namespace :text do
   desc "Generates a compressed output, light but not obfuscated"
   task :micro do
     File.open( File.join(Out, 'reset.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -72,7 +74,7 @@ namespace :text do
   desc "Generates a super-compressed output"
   task :nano do
     File.open( File.join(Out, 'reset.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Reset, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -83,7 +85,7 @@ namespace :reset do
   desc "Generates a standard, uncompressed, nested output."
   task :standard do
     File.open( File.join(Out, 'text.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Text, :style => :nested, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Text, :style => :nested, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -91,7 +93,7 @@ namespace :reset do
   desc "Generates an old-skool human-written CSS output, with no nesting."
   task :flat do
     File.open( File.join(Out, 'text.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -99,7 +101,7 @@ namespace :reset do
   desc "Generates a compressed output, light but not obfuscated"
   task :micro do
     File.open( File.join(Out, 'text.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
@@ -107,7 +109,7 @@ namespace :reset do
   desc "Generates a super-compressed output"
   task :nano do
     File.open( File.join(Out, 'text.css'), File::WRONLY|File::TRUNC|File::CREAT ) do |f|
-      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]).render
+      f.puts Sass::Engine.new(Text, :style => :expanded, :load_paths => LoadPaths).render
       f.close
     end
   end
