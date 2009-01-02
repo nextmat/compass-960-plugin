@@ -1,44 +1,56 @@
-960 Grid System
-===============
-* Version 1.0
+960 Grid System - Compass Plugin
+================================
+
+* Port of Version 1.0
 * 2008-03-24
 
 Created by Nathan Smith. See the official site for more info: <http://960.gs/>
 
-============================================================================
+---------
 
-Thank you for downloading the 960 Grid System. I hope it helps to streamline
-web development workflow. Enclosed in the bundle are printable sketch sheets
-and template files for Adobe Fireworks and Photoshop, OmniGraffle and Visio.
+This plugin adds the 960 Grid System framework to [Compass](http://compass-style.org/).
 
-Also included is a lightweight CSS file, which contains the grid dimensions.
-To use this file, simply include the 960.css in the <head> of the HTML page.  
-You may also use the reset.css and text.css files, or opt to leave them out.
-Here is an example of the XHTML code necessary to incorporate the CSS files:
+Install
+=======
 
-    <head>
-      <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
-      <link rel="stylesheet" type="text/css" media="all" href="css/text.css" />
-      <link rel="stylesheet" type="text/css" media="all" href="css/960.css" />
-    </head>
+    sudo gem install chriseppstein-compass
+    sudo gem install chriseppstein-compass-960-plugin
 
-It is worth noting that these styles do not automatically make up a finished
-site design. They are simply a starting point, ideally for rapid prototyping
-or as a basis for creating your own designs. You should not feel constrained
-by the way I have built the initial code. If you disagree with how something
-has been done, feel free to revise it for the needs of your particular site.
+Create a 960-based Compass Project
+==================================
 
-The files in the 960 Grid System are free of charge, licensed under GPL/MIT.
+    compass -r ninesixty -f 960 <project name>
 
-============================================================================
+Then edit your `grid.sass` and `text.sass` files accordingly. A reset is added into grid.sass automatically.
 
-Special thanks to Eric Meyer for his comprehensive browser reset stylesheet.
+Customizing your Grid System
+============================
 
-<http://meyerweb.com/eric/tools/css/reset/>
+To create a grid system with other number of columns use the `+grid-system` mixin to generate
+the corresponding classes.
 
-============================================================================
+Example:
 
-Converted to SASS by [elliottcable.name](http://elliottcable.name/)
+    #wrap
+      +grid-system(24)
 
-Run `rake all` from the clone root to generate all the CSS to ./css/, or run
-`rake -T` for a list of available tasks.
+Making Semantic Grids
+=====================
+
+* Use the `+container` mixin to declare your container element.
+* Use the `+grid` mixin to declare a grid element.
+* Use the `+alpha` and `+omega` mixins to declare the first and last grid elements for a row.
+* User the `+grid-prefix` and `+grid-suffix` mixins to add grid columns before or after a grid element.
+
+Example:
+
+    #wrap
+      +container
+      #left-nav
+        +alpha
+        +grid(5,16)
+      #main-content
+        +grid-prefix(1,16)
+        +grid(10, 16)
+        +omega
+
