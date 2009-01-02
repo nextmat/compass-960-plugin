@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.description = %q{The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. http://960.gs/}
   s.email = %q{me@elliottcable.name}
   s.extra_rdoc_files = ["lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "README.mkdn"]
-  s.files = ["960.gemspec", "lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "Manifest", "Rakefile", "README.mkdn", "sass/960/_grid.sass", "sass/960/_text.sass", "templates/project/grid.sass", "templates/project/text.sass", "VERSION"]
+  s.files = ["960.gemspec", "lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "Manifest", "Rakefile", "README.mkdn", "sass/960/_grid.sass", "sass/960/_text.sass", "templates/project/config.rb", "templates/project/grid.sass", "templates/project/text.sass", "VERSION"]
   s.homepage = %q{http://github.com/chriseppstein/960}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "960", "--main", "README.mkdn"]
   s.require_paths = ["lib"]

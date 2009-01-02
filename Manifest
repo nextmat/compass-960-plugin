@@ -7,6 +7,7 @@ Rakefile
 README.mkdn
 sass/960/_grid.sass
 sass/960/_text.sass
+templates/project/config.rb
 templates/project/grid.sass
 templates/project/text.sass
 VERSION
