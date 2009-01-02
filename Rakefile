@@ -21,11 +21,11 @@ rescue LoadError => boom
   puts "#{boom.to_s.capitalize}."
 end
 
-Ninesixty = File.read('sass/960/grid.sass')
-Reset = File.read('sass/960/reset.sass')
-Text = File.read('sass/960/text.sass')
+Ninesixty = File.read('templates/standalone/grid.sass')
+Reset     = File.read('templates/standalone/reset.sass')
+Text      = File.read('templates/standalone/text.sass')
 
-LoadPaths = [File.expand_path(File.join( File.dirname(__FILE__), 'sass', '960' ))]
+LoadPaths = [File.expand_path(File.join( File.dirname(__FILE__), 'sass' ))]
 
 out = 'css'; Out = File.expand_path(File.join( File.dirname(__FILE__), out ))
 FileUtils.mkdir_p(Out) unless File.directory?(Out)
