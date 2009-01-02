@@ -1,4 +1,3 @@
-960.gemspec
 lib/ninesixty/compass_plugin.rb
 lib/ninesixty/sass_extensions.rb
 lib/ninesixty.rb
