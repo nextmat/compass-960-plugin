@@ -1,8 +1,6 @@
-960.gemspec
 lib/ninesixty/compass_plugin.rb
 lib/ninesixty/sass_extensions.rb
 lib/ninesixty.rb
-Manifest
 Rakefile
 README.mkdn
 sass/960/_grid.sass
@@ -11,3 +9,4 @@ templates/project/config.rb
 templates/project/grid.sass
 templates/project/text.sass
 VERSION
+Manifest
