@@ -1,14 +1,14 @@
 Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
-  s.version = "0.9.2"
+  s.version = "0.9.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Eppstein"]
-  s.date = %q{2009-01-24}
+  s.date = %q{2009-02-17}
   s.description = %q{The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. http://960.gs/}
   s.email = %q{chris@eppsteins.net}
   s.extra_rdoc_files = ["lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "README.mkdn"]
-  s.files = ["lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "Rakefile", "README.mkdn", "sass/960/_grid.sass", "sass/960/_text.sass", "templates/project/config.rb", "templates/project/grid.sass", "templates/project/text.sass", "VERSION", "Manifest", "compass-960-plugin.gemspec"]
+  s.files = ["lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "Manifest", "Rakefile", "README.mkdn", "sass/960/_grid.sass", "sass/960/_text.sass", "templates/project/config.rb", "templates/project/grid.sass", "templates/project/manifest.rb", "templates/project/text.sass", "VERSION", "compass-960-plugin.gemspec"]
   s.homepage = %q{http://github.com/chriseppstein/compass-960-plugin}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Compass-960-plugin", "--main", "README.mkdn"]
   s.require_paths = ["lib"]
