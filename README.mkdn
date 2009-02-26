@@ -37,7 +37,7 @@ Example:
 Making Semantic Grids
 =====================
 
-* Use the `+container` mixin to declare your container element.
+* Use the `+grid-container` mixin to declare your container element.
 * Use the `+grid` mixin to declare a grid element.
 * Use the `+alpha` and `+omega` mixins to declare the first and last grid elements for a row.
 * User the `+grid-prefix` and `+grid-suffix` mixins to add grid columns before or after a grid element.
@@ -45,7 +45,7 @@ Making Semantic Grids
 Example:
 
     #wrap
-      +container
+      +grid-container
       #left-nav
         +alpha
         +grid(5,16)
