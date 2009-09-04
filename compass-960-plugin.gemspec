@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
-  s.version = "0.9.7"
+  s.version = "0.9.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chris Eppstein"]
-  s.date = %q{2009-07-29}
+  s.date = %q{2009-09-04}
   s.description = %q{The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. http://960.gs/}
   s.email = %q{chris@eppsteins.net}
   s.extra_rdoc_files = ["lib/ninesixty/compass_plugin.rb", "lib/ninesixty/sass_extensions.rb", "lib/ninesixty.rb", "README.mkdn"]
