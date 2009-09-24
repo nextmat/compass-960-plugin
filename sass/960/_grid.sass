@@ -28,7 +28,7 @@
   :margin-right 0
 
 =grids(!cols = !ninesixty_columns, !gutter_width = !ninesixty_gutter_width)
-  #{enumerate(".grid_",1,!cols)}
+  #{enumerate(".grid",1,!cols,"_")}
     +grid-unit-base
   @for !n from 1 through !cols
     .grid_#{!n}
