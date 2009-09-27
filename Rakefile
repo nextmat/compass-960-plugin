@@ -1,6 +1,5 @@
 require 'fileutils'
 require 'sass'
-require 'lib/ninesixty/sass_extensions'
 
 begin
   require 'echoe'
