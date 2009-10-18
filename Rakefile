@@ -11,7 +11,7 @@ begin
     p.url = "http://github.com/chriseppstein/compass-960-plugin"
     p.author = ['Chris Eppstein']
     p.email = "chris@eppsteins.net"
-    p.dependencies = ["chriseppstein-compass"]
+    p.dependencies = ["compass"]
     p.has_rdoc = false
   end
  
