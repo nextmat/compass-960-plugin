@@ -13,13 +13,16 @@ This plugin adds the 960 Grid System framework to [Compass](http://compass-style
 Install
 =======
 
-    gem install compass
     gem install compass-960-plugin
 
 Create a 960-based Compass Project
 ==================================
 
-    compass -r ninesixty -f 960 <project name>
+    compass create -r ninesixty my_project --using 960
+
+Or, If you prefer to use Sass's indentation based syntax:
+
+    compass create -r ninesixty my_project --using 960 --syntax sass
 
 Then edit your `grid.sass` and `text.sass` files accordingly. A reset is added into grid.sass automatically.
 
