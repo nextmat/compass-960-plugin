@@ -13,8 +13,8 @@ This plugin adds the 960 Grid System framework to [Compass](http://compass-style
 Install
 =======
 
-    sudo gem install chriseppstein-compass
-    sudo gem install chriseppstein-compass-960-plugin
+    gem install compass
+    gem install compass-960-plugin
 
 Create a 960-based Compass Project
 ==================================
