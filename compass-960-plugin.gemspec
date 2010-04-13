@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
-  s.version = "0.9.12"
+  s.version = "0.9.13"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6")
   s.authors = ["Chris Eppstein"]
@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
   s.files = [
     "compass-960-plugin.gemspec",
     "README.mkdn",
+    "lib/ninesixty.rb",
     "stylesheets/960/_grid.sass",
     "stylesheets/960/_text.sass",
     "templates/project/grid.sass",
