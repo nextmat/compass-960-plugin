@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
-  s.version = "0.9.13"
+  s.version = "0.10.0.beta.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6")
   s.authors = ["Chris Eppstein"]
-  s.date = %q{2010-04-13}
+  s.date = %q{2010-06-07}
   s.description = %q{The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. http://960.gs/}
   s.email = %q{chris@eppsteins.net}
   s.has_rdoc = false
@@ -25,5 +25,5 @@ Gem::Specification.new do |s|
   s.rubyforge_project = %q{compass-960-plugin}
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Compass compatible Sass port of 960.gs.}
-  s.add_dependency(%q<compass>, [">= 0.10.0.rc3"])
+  s.add_dependency(%q<compass>, [">= 0.10.0"])
 end
