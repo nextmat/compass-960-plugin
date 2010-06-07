@@ -58,9 +58,29 @@ $ninesixty-columns: 12 !default
   .omega
     +omega
 
+=grid-move-base
+  position: relative
+
+=grid-push($n, $cols)
+  left: ($ninesixty-grid-width / $cols) * $n
+
+=grid-pull($n, $cols)
+  left: -($ninesixty-grid-width / $cols) * $n
+
+=grid-movements($cols: $ninesixty-columns)
+  #{enumerate(".push", 1, $cols, "_")},
+  #{enumerate(".pull", 1, $cols, "_")}
+    +grid-move-base
+  @for $n from 1 through $cols
+    .push_#{$n}
+      +grid-push($n, $cols)
+    .pull_#{$n}
+      +grid-pull($n, $cols)
+
 =grid-system($cols: $ninesixty-columns)
   +grid-container
   +grids($cols)
   +grid-prefixes($cols)
   +grid-suffixes($cols)
   +grid-children
+  +grid-movements($cols)
