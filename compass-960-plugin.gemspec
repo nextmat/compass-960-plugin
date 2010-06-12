@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
   s.version = "0.10.0.beta.0"
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.6")
+  s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
   s.authors = ["Chris Eppstein"]
   s.date = %q{2010-06-07}
   s.description = %q{The 960 Grid System is an effort to streamline web development workflow by providing commonly used dimensions, based on a width of 960 pixels. http://960.gs/}
