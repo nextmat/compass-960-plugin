@@ -61,10 +61,10 @@ $ninesixty-columns: 12 !default
 =grid-move-base
   position: relative
 
-=grid-push($n, $cols)
+=grid-push($n, $cols: $ninesixty-columns)
   left: ($ninesixty-grid-width / $cols) * $n
 
-=grid-pull($n, $cols)
+=grid-pull($n, $cols: $ninesixty-columns)
   left: -($ninesixty-grid-width / $cols) * $n
 
 =grid-movements($cols: $ninesixty-columns)
