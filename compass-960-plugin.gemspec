@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{compass-960-plugin}
-  s.version = "0.10.0.beta.0"
+  s.version = "0.10.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
   s.authors = ["Chris Eppstein"]
