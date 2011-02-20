@@ -29,8 +29,21 @@ Then edit your `grid.sass` and `text.sass` files accordingly. A reset is added i
 Customizing your Grid System
 ============================
 
-To create a grid system with other number of columns use the `+grid-system` mixin to generate
-the corresponding classes.
+This plugin uses the following configuration variables:
+
+* `$ninesixty-gutter-width` (default: 20px) controls the default gutter width
+* `$ninesixty-grid-width` (default: 960px) controls the default overall grid width
+* `$ninesixty-columns` (default: 12) controls the default number of grid columns
+
+All of the mixins included with this plugin use these configuration variables
+as defaults if the corresponding argument is omitted from a mixin call.
+
+Class-Based Grid System
+=======================
+
+To create a grid system that works like the original 960 Grid Sytem framework
+use the `+grid-system` mixin to generate the corresponding classes. You can
+also customize the number of columns as demonstrated in the following example.
 
 Example:
 
@@ -40,10 +53,15 @@ Example:
 Making Semantic Grids
 =====================
 
+To create a grid system using only CSS, use the following semantic grid mixins:
+
 * Use the `+grid-container` mixin to declare your container element.
-* Use the `+grid` mixin to declare a grid element.
+* Use the `+grid(N, columns, gutter-width)` mixin to declare a grid element.
 * Use the `+alpha` and `+omega` mixins to declare the first and last grid elements for a row.
-* User the `+grid-prefix` and `+grid-suffix` mixins to add grid columns before or after a grid element.
+* Use the `+grid-prefix(N, columns)` and `+grid-suffix(N, columns)` mixins to add empty grid columns before or after a grid element.
+* Use the `+grid-push(N, columns)` and `+grid-pull(N, columns)` mixins to move a grid element from its default position.
+
+`N` is the number of grid columns to span as in `grid_N` or `push_N` with the original 960 Grid System framework.
 
 Example:
 
@@ -51,9 +69,9 @@ Example:
       +grid-container
       #left-nav
         +alpha
-        +grid(5,16)
+        +grid(5, 16)
       #main-content
-        +grid-prefix(1,16)
+        +grid-prefix(1, 16)
         +grid(10, 16)
         +omega
 
