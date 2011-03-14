@@ -64,13 +64,15 @@ To create a grid system using only CSS, use the following semantic grid mixins:
 
 Example:
 
+    $ninesixty-columns: 16
+
     #wrap
       +grid-container
       #left-nav
         +alpha
-        +grid(5, 16)
+        +grid(5)
       #main-content
-        +grid-prefix(1, 16)
-        +grid(10, 16)
+        +grid-prefix(1)
+        +grid(10)
         +omega
 
