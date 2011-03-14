@@ -1,10 +1,9 @@
 960 Grid System - Compass Plugin
 ================================
 
-* Port of Version 1.0
-* 2008-03-24
-
 Created by Nathan Smith. See the official site for more info: <http://960.gs/>
+
+* This plugin is consistent with latest version of 960.gs as of 3/14/2011
 
 ---------
 
