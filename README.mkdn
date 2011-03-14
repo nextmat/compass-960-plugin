@@ -1,7 +1,7 @@
 960 Grid System - Compass Plugin
 ================================
 
-Created by Nathan Smith. See the official site for more info: <http://960.gs/>
+960.gs is created by Nathan Smith. See the official site for more info: <http://960.gs/>
 
 * This plugin is consistent with latest version of 960.gs as of 3/14/2011
 
@@ -76,3 +76,13 @@ Example:
         +grid(10)
         +omega
 
+Authors/Contributors
+====================
+
+[Chris Eppstein](http://chriseppstein.github.com/) is the creator of Compass, a core contributor to Sass and the father of this plugin.
+
+[Nathan Smith](http://sonspring.com/) is the author of [960.gs](http://960.gs/), the grid system this plugin is based on. He's also kind enough to let us pester him with questions from time to time.
+
+These days, [Matt Sanders](https://github.com/mattsa) is probably the best person chat with if you've found a bug or want to get a patch included.
+
+We've also been lucky enough to have some help from a number of [other contributors](https://github.com/chriseppstein/compass-960-plugin/contributors).
