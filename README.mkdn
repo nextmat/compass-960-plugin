@@ -30,9 +30,9 @@ Customizing your Grid System
 
 This plugin uses the following configuration variables:
 
-* `$ninesixty-gutter-width` (default: 20px) controls the default gutter width
-* `$ninesixty-grid-width` (default: 960px) controls the default overall grid width
 * `$ninesixty-columns` (default: 12) controls the default number of grid columns
+* `$ninesixty-grid-width` (default: 960px) controls the default overall grid width
+* `$ninesixty-gutter-width` (default: 20px) controls the default gutter width
 
 All of the mixins included with this plugin use these configuration variables
 as defaults if the corresponding argument is omitted from a mixin call.
