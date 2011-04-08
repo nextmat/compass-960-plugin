@@ -1,0 +1,12 @@
+0.10.2 04/08/2011
+=================
+
+add $ninesixty-class-separator variable, thanks mattyoung
+add changelog
+
+0.10.1 03/14/2011
+=================
+
+documentation improvements, thanks Matthew Schulkind
+fix positioning bug in grid-push and grid-pull, thanks Matthew Schulkind
+grid-push and grid-pull default to specified column count correctly
