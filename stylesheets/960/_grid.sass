@@ -81,7 +81,7 @@ $ninesixty-class-separator: "_" !default
   #{enumerate(".push", 1, $cols, $ninesixty-class-separator)},
   #{enumerate(".pull", 1, $cols, $ninesixty-class-separator)}
     +grid-move-base
-  @for $n from 1 through $cols
+  @for $n from 1 through $cols - 1
     .push#{$ninesixty-class-separator}#{$n}
       +grid-move-push($n, $cols)
     .pull#{$ninesixty-class-separator}#{$n}
