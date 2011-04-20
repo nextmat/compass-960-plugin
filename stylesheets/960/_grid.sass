@@ -88,9 +88,10 @@ $ninesixty-class-separator: "_" !default
       +grid-move-pull($n, $cols)
 
 =grid-system($cols: $ninesixty-columns)
-  +grid-container
-  +grids($cols)
-  +grid-prefixes($cols)
-  +grid-suffixes($cols)
-  +grid-children
-  +grid-movements($cols)
+  .container#{$ninesixty-class-separator}#{$cols}
+    +grid-container
+    +grids($cols)
+    +grid-prefixes($cols)
+    +grid-suffixes($cols)
+    +grid-children
+    +grid-movements($cols)

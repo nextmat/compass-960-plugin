@@ -41,14 +41,13 @@ as defaults if the corresponding argument is omitted from a mixin call.
 Class-Based Grid System
 =======================
 
-To create a grid system that works like the original 960 Grid Sytem framework
+To create a grid system that works like the original 960 Grid System framework
 use the `+grid-system` mixin to generate the corresponding classes. You can
 also customize the number of columns as demonstrated in the following example.
 
 Example:
 
-    #wrap
-      +grid-system(24)
+    +grid-system(24)
 
 Making Semantic Grids
 =====================
