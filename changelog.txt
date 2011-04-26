@@ -1,3 +1,10 @@
+0.10.3 04/25/2011
+=================
+
+add missing gutter-width when using =grids, thanks ShPakvel
+don't create max-length .push and .pull classes, thanks ShPakvel
+doc improvements
+
 0.10.2 04/08/2011
 =================
 
