@@ -78,8 +78,8 @@ $ninesixty-class-separator: "_" !default
   +grid-move-pull($n, $cols)
 
 =grid-movements($cols: $ninesixty-columns)
-  #{enumerate(".push", 1, $cols, $ninesixty-class-separator)},
-  #{enumerate(".pull", 1, $cols, $ninesixty-class-separator)}
+  #{enumerate(".push", 1, $cols - 1, $ninesixty-class-separator)},
+  #{enumerate(".pull", 1, $cols - 1, $ninesixty-class-separator)}
     +grid-move-base
   @for $n from 1 through $cols - 1
     .push#{$ninesixty-class-separator}#{$n}
