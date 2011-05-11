@@ -69,13 +69,17 @@ Example:
 
     #wrap
       +grid-container
-      #left-nav
-        +alpha
-        +grid(5)
-      #main-content
-        +grid-prefix(1)
-        +grid(10)
-        +omega
+      #header
+        +grid(16)
+      #middle
+        +grid(16)
+        #left-nav
+          +grid(5)
+          +alpha
+        #main-content
+          +grid-prefix(1)
+          +grid(10)
+          +omega
 
 Authors/Contributors
 ====================
