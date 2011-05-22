@@ -50,6 +50,9 @@ Example:
     #wrap
       +grid-system(24)
 
+
+NOTE: The difference between using +grid-container instead of +grid-system means you don’t end up with all the 960 grid classes in your style sheet, which won’t be required because of your use of the mixins.
+
 Making Semantic Grids
 =====================
 
