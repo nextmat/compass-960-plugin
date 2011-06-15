@@ -25,6 +25,19 @@ Or, If you prefer to use Sass's indentation based syntax:
 
 Then edit your `grid.sass` and `text.sass` files accordingly. A reset is added into grid.sass automatically.
 
+Adding the 960 plugin to an existing project
+============================================
+
+Add the following to your compass.rb config file:
+
+    # Require any additional compass plugins here.
+    require 'ninesixty'
+    
+Then make sure you have imported the grid library into your core .sass or .scss file with:
+
+    @import compass/reset
+    @import 960/grid
+
 Customizing your Grid System
 ============================
 
