@@ -94,3 +94,7 @@ $ninesixty-class-separator: "_" !default
   +grid-suffixes($cols)
   +grid-children
   +grid-movements($cols)
+
+=grid-system-complete($cols: $ninesixty-columns)
+  .container#{$ninesixty-class-separator}#{$cols}
+    +grid-system($cols)
