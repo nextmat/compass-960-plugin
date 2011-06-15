@@ -55,13 +55,22 @@ Class-Based Grid System
 =======================
 
 To create a grid system that works like the original 960 Grid System framework
-use the `+grid-system` mixin to generate the corresponding classes. You can
-also customize the number of columns as demonstrated in the following example.
+use the `+grid-system-complete` mixin to generate the corresponding classes. You 
+can also customize the number of columns as demonstrated:
 
 Example:
+    
+    +grid-system-complete(24)
 
+If you want to scope the grid inside a specific set of selectors or control your container class' name you can use the `+grid-system` mixin instead.    
+
+Example: 
+    
     #wrap
-      +grid-system(24)
+      .my_container
+        +grid-system(16)
+      
+This will render all of the grid system nested below your selector, replacing the normal function of the container class (would be .container_16 in this example).
 
 Making Semantic Grids
 =====================
