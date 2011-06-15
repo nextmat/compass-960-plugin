@@ -1,3 +1,10 @@
+0.10.4 06/15/2011
+=================
+
+add grid-system-complete mixin which includes relevant .container_X class
+add info about installing in existing compass project
+remove unneeded max .push and .pull classes, thank ShPakvel
+
 0.10.3 04/25/2011
 =================
 
