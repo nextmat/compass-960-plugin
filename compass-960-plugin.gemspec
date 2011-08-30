@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
     "templates/project/manifest.rb",
     "templates/project/text.sass"
   ]
-  s.homepage = %q{http://github.com/chriseppstein/compass-960-plugin}
+  s.homepage = %q{https://github.com/nextmat/compass-960-plugin}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{compass-960-plugin}
   s.rubygems_version = %q{1.3.6}
