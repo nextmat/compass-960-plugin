@@ -112,4 +112,4 @@ Authors/Contributors
 
 These days, [Matt Sanders](https://github.com/nextmat) is probably the best person chat with if you've found a bug or want to get a patch included.
 
-We've also been lucky enough to have some help from a number of [other contributors](https://github.com/chriseppstein/compass-960-plugin/contributors).
+We've also been lucky enough to have some help from a number of [other contributors](https://github.com/nextmat/compass-960-plugin/contributors).
