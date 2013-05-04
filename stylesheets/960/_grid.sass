@@ -32,10 +32,12 @@ $ninesixty-class-separator: "_" !default
   margin-right: 0
 
 =grids($cols: $ninesixty-columns, $gutter-width: $ninesixty-gutter-width)
-  #{enumerate(".grid", 1, $cols, $ninesixty-class-separator)}
+  %grid-unit-base
     +grid-unit-base($gutter-width)
+
   @for $n from 1 through $cols
     .grid#{$ninesixty-class-separator}#{$n}
+      @extend %grid-unit-base
       +grid-width($n, $cols, $gutter-width)
 
 =grid-prefix($n, $cols: $ninesixty-columns)
@@ -78,13 +80,15 @@ $ninesixty-class-separator: "_" !default
   +grid-move-pull($n, $cols)
 
 =grid-movements($cols: $ninesixty-columns)
-  #{enumerate(".push", 1, $cols - 1, $ninesixty-class-separator)},
-  #{enumerate(".pull", 1, $cols - 1, $ninesixty-class-separator)}
+  %grid-move-base
     +grid-move-base
+
   @for $n from 1 through $cols - 1
     .push#{$ninesixty-class-separator}#{$n}
+      @extend %grid-move-base
       +grid-move-push($n, $cols)
     .pull#{$ninesixty-class-separator}#{$n}
+      @extend %grid-move-base
       +grid-move-pull($n, $cols)
 
 =grid-system($cols: $ninesixty-columns)
